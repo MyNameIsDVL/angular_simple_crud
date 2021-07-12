@@ -1,0 +1,12 @@
+<form [formGroup]="modelForm" (ngSubmit)="ok(modelForm)">
+    <div class="p-fluid p-formgrid p-grid">
+        <div class="p-field p-col" *ngFor='let model of formData'>
+            <label>{{ model.des }}</label>
+            <input pInputText [name]="model.name" [formControlName]="model.name" class="form-control" type="text" [id]="model.name"/>      
+        </div>
+        <div class="p-field p-col">
+            <button pButton type="submit" class="p-button-success width-200px" [disabled]="!modelForm.valid" [label]="buttonlabel.label"></button>
+            <button pButton type="button" class="p-button-dark width-200px" (click)="goToStudents()" label="Anuluj"></button>
+        </div>
+    </div>
+</form>

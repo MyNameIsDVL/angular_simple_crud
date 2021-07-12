@@ -1,0 +1,4 @@
+<div class="container-fluid dvl-container">
+    <button class="mb-4" pButton type="button" label="Dodaj studenta" (click)="goToAddStudent()"></button>
+    <app-list [list]="studentsList" [cols]="cols" (removeEvent)="remove($event)" (goToEditPage)="goToEditStudent($event)"></app-list>
+</div>
